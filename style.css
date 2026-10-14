@@ -6,25 +6,34 @@ body {
   font-family: Arial;
 }
 
-h1 {
+#title {
   font-size: 60px;
-  margin: 30px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+#warning {
+  font-size: 18px;
+  letter-spacing: 4px;
 }
 
 .hero {
   width: 500px;
   max-width: 90%;
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 .hero:hover {
   transform: scale(1.08);
 }
 
-button {
-  display: block;
-  margin: 30px auto;
-  padding: 15px 40px;
-  font-size: 20px;
-  cursor: pointer;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
