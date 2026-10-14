@@ -9,6 +9,10 @@ warning.addEventListener("click", function () {
 });
 
 leopard.addEventListener("mouseenter", function () {
+  introAudio.pause();
+
+  hoverAudio.pause();
   hoverAudio.currentTime = 0;
+
   hoverAudio.play();
 });
